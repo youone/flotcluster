@@ -13,14 +13,14 @@ public class FlotClusterHttpServer {
 
     public FlotClusterHttpServer() throws Exception
     {
-
+    	//System.setProperty("org.eclipse.swt.browser.XULRunnerPath","C:\\Users\\johan\\workspace\\flotcluster\\java\\lib\\xulrunner-3.6.28-sdk\\bin");
     	System.setProperty("org.eclipse.swt.browser.XULRunnerPath","C:\\Users\\johan\\workspace\\flotcluster\\java\\lib\\xulrunner-24.0");
 
     	Server server = new Server(8181);
  
         ResourceHandler staticHandler = new ResourceHandler();
         staticHandler.setDirectoriesListed(true);
-        staticHandler.setResourceBase("./");        
+        staticHandler.setResourceBase("../");        
         ContextHandler staticcontext = new ContextHandler("/");
         staticcontext.setContextPath("/");
         staticcontext.setHandler(staticHandler);
@@ -37,9 +37,9 @@ public class FlotClusterHttpServer {
 
         server.start();
 
-        SwtBrowser swtBrowser = new SwtBrowser();
+        SwtBrowser swtBrowser = new SwtBrowser(server);
 
-        server.join();
+        //server.join();
 
         
     }

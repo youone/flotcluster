@@ -1,5 +1,7 @@
 
  
+import javafx.application.Application;
+
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.ContextHandler;
@@ -9,9 +11,12 @@ import org.eclipse.jetty.servlet.ServletContextHandler;
  
 public class FlotClusterHttpServer {
 
-    public static void main( String[] args ) throws Exception
+    public FlotClusterHttpServer() throws Exception
     {
-        Server server = new Server(8181);
+
+    	System.setProperty("org.eclipse.swt.browser.XULRunnerPath","C:\\Users\\johan\\workspace\\flotcluster\\java\\lib\\xulrunner-24.0");
+
+    	Server server = new Server(8181);
  
         ResourceHandler staticHandler = new ResourceHandler();
         staticHandler.setDirectoriesListed(true);
@@ -31,7 +36,16 @@ public class FlotClusterHttpServer {
         server.setHandler(contexts);
 
         server.start();
+
+        SwtBrowser swtBrowser = new SwtBrowser();
+
         server.join();
+
+        
+    }
+    
+    public static void main(String[] args) throws Exception{
+    	FlotClusterHttpServer flotClusterHttpServer = new FlotClusterHttpServer();
     }
 
     

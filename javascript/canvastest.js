@@ -22,7 +22,7 @@ $(document).ready( function(){
 	$("#saveimage").click(saveImage);
 	//console.log(c.toDataURL("image/png"));
 	//document.getElementById("placeholder").appendChild(convertCanvasToImage(c));
-
+	
 });
 
 

@@ -8,5 +8,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.baseBrowserLibrary"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.FireFoxBrowserLibrary"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.USER_LIBRARY/mylib"/>
+	<classpathentry kind="con" path="org.eclipselabs.jsdt.jquery.core.CoflictLibrary_2.1"/>
 	<classpathentry kind="output" path=""/>
 </classpath>

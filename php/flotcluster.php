@@ -1,5 +1,7 @@
 <?php
 
+//comment
+
 class histogram {
 
 	private $nBinsX = 0;

@@ -21,7 +21,7 @@ public static void main(String[] args) throws Exception {
  
 @Override
 public void start(Stage primaryStage) {
-    primaryStage.setTitle("Kolibri");
+    primaryStage.setTitle("template");
     primaryStage.getIcons().add(new Image("http://iconverticons.com/img/logoo.png"));
     
     myBrowser = new MyBrowser();

@@ -5,6 +5,7 @@ import java.io.File;
 import javax.imageio.ImageIO;
 
 import org.eclipse.jetty.server.Server;
+
 import org.eclipse.swt.*;
 import org.eclipse.swt.widgets.*;
 import org.eclipse.swt.browser.*;
@@ -69,8 +70,8 @@ public class SwtBrowser {
 		shell.setMenuBar(menuBar);
 
 		try {
-			browser = new Browser(shell, SWT.MOZILLA);
-			//browser = new Browser(shell, SWT.NONE);
+			//browser = new Browser(shell, SWT.MOZILLA);
+			browser = new Browser(shell, SWT.NONE);
 			
 			//browser.setMenu(fileMenu);
 		} catch (SWTError e) {
